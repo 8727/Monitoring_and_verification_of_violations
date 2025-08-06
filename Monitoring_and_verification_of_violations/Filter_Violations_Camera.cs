@@ -90,7 +90,7 @@ namespace Monitoring_and_verification_of_violations
             SetAllItemsChecked(camerasList, false);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Recognition_Selected_P_Click(object sender, EventArgs e)
         {
             switch (SelectedRecognition)
             {
@@ -110,7 +110,7 @@ namespace Monitoring_and_verification_of_violations
             Recognition_Selected.Text = SelectedRecognition;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Recognition_Selected_M_Click(object sender, EventArgs e)
         {
             switch (SelectedRecognition)
             {

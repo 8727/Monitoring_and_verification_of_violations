@@ -81,6 +81,9 @@
     <EmbeddedResource Include="Filter_Factor.resx">
       <DependentUpon>Filter_Factor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Filter_Violations_Camera.resx">
+      <DependentUpon>Filter_Violations_Camera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_UI.resx">
       <DependentUpon>Main_UI.cs</DependentUpon>
     </EmbeddedResource>

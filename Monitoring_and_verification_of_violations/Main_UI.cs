@@ -369,14 +369,24 @@ namespace Monitoring_and_verification_of_violations
         void Select_Factor_Source_Click(object sender, EventArgs e)
         {
             Ui_Lock();
-            using (var filterDialog = new Filter_Factor())
+
+            var violations = new HashSet<string>(DescriptionViolation.Values);
+
+            using (var filterDialog = new Filter_Factor(violations.ToList(), lastSelectedViolations, lastSelectedRecognition))
             {
                 if (filterDialog.ShowDialog() == DialogResult.OK)
                 {
+                    lastSelectedViolations = filterDialog.SelectedViolations;
+                    lastSelectedRecognition = filterDialog.SelectedRecognition;
+                    ApplyFilterFactor(lastSelectedViolations, lastSelectedRecognition);
 
                 }
             }
             Ui_Unlock();
+        }
+
+        void ApplyFilterFactor(List<string> selectedViolations, string selectedRecognition)
+        {
         }
 
         void Filter_Click(object sender, EventArgs e)

@@ -267,6 +267,7 @@
             this.btnClearAll_V.TabIndex = 2;
             this.btnClearAll_V.Text = "Сlear";
             this.btnClearAll_V.UseVisualStyleBackColor = false;
+            this.btnClearAll_V.Click += new System.EventHandler(this.btnClearAll_V_Click);
             // 
             // btnSelectAll_V
             // 
@@ -277,6 +278,7 @@
             this.btnSelectAll_V.TabIndex = 1;
             this.btnSelectAll_V.Text = "All";
             this.btnSelectAll_V.UseVisualStyleBackColor = false;
+            this.btnSelectAll_V.Click += new System.EventHandler(this.btnSelectAll_V_Click);
             // 
             // violationsList
             // 
@@ -300,6 +302,7 @@
             this.Recognition_Selected_M.TabIndex = 14;
             this.Recognition_Selected_M.Text = ">";
             this.Recognition_Selected_M.UseVisualStyleBackColor = false;
+            this.Recognition_Selected_M.Click += new System.EventHandler(this.Recognition_Selected_M_Click);
             // 
             // Recognition_Selected_P
             // 
@@ -312,6 +315,7 @@
             this.Recognition_Selected_P.TabIndex = 13;
             this.Recognition_Selected_P.Text = "<";
             this.Recognition_Selected_P.UseVisualStyleBackColor = false;
+            this.Recognition_Selected_P.Click += new System.EventHandler(this.Recognition_Selected_P_Click);
             // 
             // Recognition_Selected
             // 
@@ -322,7 +326,6 @@
             this.Recognition_Selected.ReadOnly = true;
             this.Recognition_Selected.Size = new System.Drawing.Size(219, 44);
             this.Recognition_Selected.TabIndex = 12;
-            this.Recognition_Selected.Text = "Do not check";
             this.Recognition_Selected.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnApply

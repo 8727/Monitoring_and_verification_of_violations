@@ -36,10 +36,10 @@
             this.btnClearAll_C = new System.Windows.Forms.Button();
             this.btnSelectAll_C = new System.Windows.Forms.Button();
             this.camerasList = new System.Windows.Forms.CheckedListBox();
-            this.btnApply = new System.Windows.Forms.Button();
             this.Recognition_Selected = new System.Windows.Forms.TextBox();
             this.Recognition_Selected_P = new System.Windows.Forms.Button();
             this.Recognition_Selected_M = new System.Windows.Forms.Button();
+            this.btnApply = new System.Windows.Forms.Button();
             this.Violations.SuspendLayout();
             this.Cameras.SuspendLayout();
             this.SuspendLayout();
@@ -139,23 +139,6 @@
             this.camerasList.Sorted = true;
             this.camerasList.TabIndex = 0;
             // 
-            // btnApply
-            // 
-            this.btnApply.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnApply.BackgroundImage = global::Monitoring_and_verification_of_violations.Properties.Resources.save_2;
-            this.btnApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnApply.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnApply.FlatAppearance.BorderSize = 0;
-            this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnApply.Location = new System.Drawing.Point(406, 339);
-            this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(80, 80);
-            this.btnApply.TabIndex = 0;
-            this.btnApply.UseMnemonic = false;
-            this.btnApply.UseVisualStyleBackColor = false;
-            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
-            // 
             // Recognition_Selected
             // 
             this.Recognition_Selected.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -178,7 +161,7 @@
             this.Recognition_Selected_P.TabIndex = 6;
             this.Recognition_Selected_P.Text = "<";
             this.Recognition_Selected_P.UseVisualStyleBackColor = false;
-            this.Recognition_Selected_P.Click += new System.EventHandler(this.button1_Click);
+            this.Recognition_Selected_P.Click += new System.EventHandler(this.Recognition_Selected_P_Click);
             // 
             // Recognition_Selected_M
             // 
@@ -191,9 +174,26 @@
             this.Recognition_Selected_M.TabIndex = 7;
             this.Recognition_Selected_M.Text = ">";
             this.Recognition_Selected_M.UseVisualStyleBackColor = false;
-            this.Recognition_Selected_M.Click += new System.EventHandler(this.button2_Click);
+            this.Recognition_Selected_M.Click += new System.EventHandler(this.Recognition_Selected_M_Click);
             // 
-            // Filret_Violations_Camera
+            // btnApply
+            // 
+            this.btnApply.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnApply.BackgroundImage = global::Monitoring_and_verification_of_violations.Properties.Resources.save_2;
+            this.btnApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnApply.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnApply.FlatAppearance.BorderSize = 0;
+            this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnApply.Location = new System.Drawing.Point(406, 339);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(80, 80);
+            this.btnApply.TabIndex = 0;
+            this.btnApply.UseMnemonic = false;
+            this.btnApply.UseVisualStyleBackColor = false;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
+            // 
+            // Filter_Violations_Camera
             // 
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(498, 428);
@@ -206,7 +206,7 @@
             this.Controls.Add(this.btnApply);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.Name = "Filret_Violations_Camera";
+            this.Name = "Filter_Violations_Camera";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Filret_Violations_Camera";
