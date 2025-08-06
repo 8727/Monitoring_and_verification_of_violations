@@ -4,13 +4,13 @@ using System.Windows.Forms;
 
 namespace Monitoring_and_verification_of_violations
 {
-    public partial class Filret_Violations_Camera : Form
+    public partial class Filter_Violations_Camera : Form
     {
         public List<string> SelectedViolations { get; private set; }
         public List<string> SelectedCameras { get; private set; }
         public string SelectedRecognition { get; private set; }
 
-        public Filret_Violations_Camera(
+        public Filter_Violations_Camera(
             List<string> violations,
             List<string> cameras,
             List<string> initialSelectedViolations = null,

@@ -33,25 +33,25 @@
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.Verification_Correct = new System.Windows.Forms.Button();
             this.Verification_Incorrect = new System.Windows.Forms.Button();
-            this.img_photo_ts = new System.Windows.Forms.PictureBox();
             this.Video = new System.Windows.Forms.Button();
             this.Verification_CheckBox = new System.Windows.Forms.CheckBox();
             this.Recognition_CheckBox = new System.Windows.Forms.CheckBox();
-            this.Save = new System.Windows.Forms.Button();
             this.number_regno = new System.Windows.Forms.TextBox();
-            this.img_photo_grz = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Count_Files = new System.Windows.Forms.TextBox();
             this.Count_Files_Label = new System.Windows.Forms.Label();
+            this.Cars_List = new System.Windows.Forms.ListBox();
+            this.img_photo_ts = new System.Windows.Forms.PictureBox();
+            this.Save = new System.Windows.Forms.Button();
+            this.img_photo_grz = new System.Windows.Forms.PictureBox();
             this.Clear = new System.Windows.Forms.Button();
             this.Filter = new System.Windows.Forms.Button();
             this.Select_Factor_Source = new System.Windows.Forms.Button();
             this.Select_Folder_Source = new System.Windows.Forms.Button();
-            this.Cars_List = new System.Windows.Forms.ListBox();
             this.Drop.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_photo_ts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_photo_grz)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Drop
@@ -113,24 +113,10 @@
             this.Verification_Incorrect.UseVisualStyleBackColor = false;
             this.Verification_Incorrect.Click += new System.EventHandler(this.Verification_Incorrect_Click);
             // 
-            // img_photo_ts
-            // 
-            this.img_photo_ts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.img_photo_ts.BackColor = System.Drawing.Color.Gray;
-            this.img_photo_ts.Location = new System.Drawing.Point(213, 89);
-            this.img_photo_ts.Name = "img_photo_ts";
-            this.img_photo_ts.Size = new System.Drawing.Size(1280, 720);
-            this.img_photo_ts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_photo_ts.TabIndex = 27;
-            this.img_photo_ts.TabStop = false;
-            // 
             // Video
             // 
             this.Video.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Video.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Video.BackgroundImage = global::Monitoring_and_verification_of_violations.Properties.Resources.video;
             this.Video.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Video.Enabled = false;
             this.Video.FlatAppearance.BorderSize = 0;
@@ -170,22 +156,6 @@
             this.Recognition_CheckBox.UseVisualStyleBackColor = true;
             this.Recognition_CheckBox.Click += new System.EventHandler(this.Recognition_CheckBox_CheckedChanged);
             // 
-            // Save
-            // 
-            this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Save.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Save.BackgroundImage = global::Monitoring_and_verification_of_violations.Properties.Resources.save;
-            this.Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Save.FlatAppearance.BorderSize = 0;
-            this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Save.ForeColor = System.Drawing.Color.White;
-            this.Save.Location = new System.Drawing.Point(875, 6);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(80, 80);
-            this.Save.TabIndex = 23;
-            this.Save.UseVisualStyleBackColor = false;
-            this.Save.Click += new System.EventHandler(this.Save_Click);
-            // 
             // number_regno
             // 
             this.number_regno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -199,18 +169,6 @@
             this.number_regno.Text = "*001аА%";
             this.number_regno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.number_regno.WordWrap = false;
-            // 
-            // img_photo_grz
-            // 
-            this.img_photo_grz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.img_photo_grz.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.img_photo_grz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.img_photo_grz.Location = new System.Drawing.Point(959, 2);
-            this.img_photo_grz.Name = "img_photo_grz";
-            this.img_photo_grz.Size = new System.Drawing.Size(208, 85);
-            this.img_photo_grz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.img_photo_grz.TabIndex = 21;
-            this.img_photo_grz.TabStop = false;
             // 
             // groupBox1
             // 
@@ -248,6 +206,60 @@
             this.Count_Files_Label.Size = new System.Drawing.Size(89, 37);
             this.Count_Files_Label.TabIndex = 13;
             this.Count_Files_Label.Text = "Files";
+            // 
+            // Cars_List
+            // 
+            this.Cars_List.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Cars_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Cars_List.FormattingEnabled = true;
+            this.Cars_List.ItemHeight = 20;
+            this.Cars_List.Location = new System.Drawing.Point(3, 5);
+            this.Cars_List.Name = "Cars_List";
+            this.Cars_List.Size = new System.Drawing.Size(204, 804);
+            this.Cars_List.TabIndex = 0;
+            this.Cars_List.SelectedIndexChanged += new System.EventHandler(this.Cars_List_SelectedIndexChanged);
+            // 
+            // img_photo_ts
+            // 
+            this.img_photo_ts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_photo_ts.BackColor = System.Drawing.Color.Gray;
+            this.img_photo_ts.Location = new System.Drawing.Point(213, 89);
+            this.img_photo_ts.Name = "img_photo_ts";
+            this.img_photo_ts.Size = new System.Drawing.Size(1280, 720);
+            this.img_photo_ts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_photo_ts.TabIndex = 27;
+            this.img_photo_ts.TabStop = false;
+            // 
+            // Save
+            // 
+            this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Save.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Save.BackgroundImage = global::Monitoring_and_verification_of_violations.Properties.Resources.save;
+            this.Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Save.FlatAppearance.BorderSize = 0;
+            this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Save.ForeColor = System.Drawing.Color.White;
+            this.Save.Location = new System.Drawing.Point(875, 6);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(80, 80);
+            this.Save.TabIndex = 23;
+            this.Save.UseVisualStyleBackColor = false;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
+            // img_photo_grz
+            // 
+            this.img_photo_grz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.img_photo_grz.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.img_photo_grz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.img_photo_grz.Location = new System.Drawing.Point(959, 2);
+            this.img_photo_grz.Name = "img_photo_grz";
+            this.img_photo_grz.Size = new System.Drawing.Size(208, 85);
+            this.img_photo_grz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.img_photo_grz.TabIndex = 21;
+            this.img_photo_grz.TabStop = false;
             // 
             // Clear
             // 
@@ -309,19 +321,6 @@
             this.Select_Folder_Source.UseVisualStyleBackColor = false;
             this.Select_Folder_Source.Click += new System.EventHandler(this.Select_Folder_Source_Click);
             // 
-            // Cars_List
-            // 
-            this.Cars_List.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.Cars_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Cars_List.FormattingEnabled = true;
-            this.Cars_List.ItemHeight = 20;
-            this.Cars_List.Location = new System.Drawing.Point(3, 5);
-            this.Cars_List.Name = "Cars_List";
-            this.Cars_List.Size = new System.Drawing.Size(204, 804);
-            this.Cars_List.TabIndex = 0;
-            this.Cars_List.SelectedIndexChanged += new System.EventHandler(this.Cars_List_SelectedIndexChanged);
-            // 
             // Main_UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -334,14 +333,15 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MinimumSize = new System.Drawing.Size(1516, 855);
             this.Name = "Main_UI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Monitoring and verification of violations";
             this.Load += new System.EventHandler(this.Main_UI_Load);
             this.Drop.ResumeLayout(false);
             this.Drop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_photo_ts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_photo_grz)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_photo_ts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_photo_grz)).EndInit();
             this.ResumeLayout(false);
 
         }

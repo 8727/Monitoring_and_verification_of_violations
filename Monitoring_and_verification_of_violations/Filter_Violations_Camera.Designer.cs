@@ -1,6 +1,6 @@
 ﻿namespace Monitoring_and_verification_of_violations
 {
-    partial class Filret_Violations_Camera
+    partial class Filter_Violations_Camera
     {
         /// <summary>
         /// Required designer variable.

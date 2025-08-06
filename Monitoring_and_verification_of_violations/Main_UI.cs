@@ -368,9 +368,15 @@ namespace Monitoring_and_verification_of_violations
 
         void Select_Factor_Source_Click(object sender, EventArgs e)
         {
-            //Ui_Lock();
+            Ui_Lock();
+            using (var filterDialog = new Filter_Factor())
+            {
+                if (filterDialog.ShowDialog() == DialogResult.OK)
+                {
 
-            //Ui_Unlock();
+                }
+            }
+            Ui_Unlock();
         }
 
         void Filter_Click(object sender, EventArgs e)
@@ -389,7 +395,7 @@ namespace Monitoring_and_verification_of_violations
                     cameras.Add(car.camera);
             }
 
-            using (var filterDialog = new Filret_Violations_Camera(violations.ToList(), cameras.ToList(), lastSelectedViolations, lastSelectedCameras, lastSelectedRecognition))
+            using (var filterDialog = new Filter_Violations_Camera(violations.ToList(), cameras.ToList(), lastSelectedViolations, lastSelectedCameras, lastSelectedRecognition))
             {
                 if (filterDialog.ShowDialog() == DialogResult.OK)
                 {
