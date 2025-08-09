@@ -39,8 +39,17 @@ namespace Monitoring_and_verification_of_violations
             }
         }
 
+        List<string> GetCheckedItems(CheckedListBox listBox)
+        {
+            var checkedItems = new List<string>();
+            foreach (var item in listBox.CheckedItems)
+                checkedItems.Add(item.ToString());
+            return checkedItems;
+        }
         private void btnApply_Click(object sender, EventArgs e)
         {
+            SelectedViolations = GetCheckedItems(violationsList);
+
             DialogResult = DialogResult.OK;
             Close();
         }

@@ -51,6 +51,8 @@
             this.Recognition_Selected_P = new System.Windows.Forms.Button();
             this.Recognition_Selected = new System.Windows.Forms.TextBox();
             this.btnApply = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.RangeIP.SuspendLayout();
             this.auti.SuspendLayout();
             this.Violations.SuspendLayout();
@@ -63,7 +65,7 @@
             this.RangeIP.Controls.Add(this.StartIP);
             this.RangeIP.Controls.Add(this.LebelStopIP);
             this.RangeIP.Controls.Add(this.LebelStartIP);
-            this.RangeIP.Location = new System.Drawing.Point(8, 2);
+            this.RangeIP.Location = new System.Drawing.Point(323, 3);
             this.RangeIP.Margin = new System.Windows.Forms.Padding(5);
             this.RangeIP.Name = "RangeIP";
             this.RangeIP.Padding = new System.Windows.Forms.Padding(5);
@@ -74,6 +76,7 @@
             // Search
             // 
             this.Search.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Search.BackgroundImage = global::Monitoring_and_verification_of_violations.Properties.Resources.search;
             this.Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Search.FlatAppearance.BorderSize = 0;
             this.Search.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -142,18 +145,18 @@
             this.auti.Controls.Add(this.sshLogin);
             this.auti.Controls.Add(this.LebelPass);
             this.auti.Controls.Add(this.LebelLogin);
-            this.auti.Location = new System.Drawing.Point(330, 2);
+            this.auti.Location = new System.Drawing.Point(323, 103);
             this.auti.Margin = new System.Windows.Forms.Padding(5);
             this.auti.Name = "auti";
             this.auti.Padding = new System.Windows.Forms.Padding(5);
-            this.auti.Size = new System.Drawing.Size(284, 100);
+            this.auti.Size = new System.Drawing.Size(310, 100);
             this.auti.TabIndex = 9;
             this.auti.TabStop = false;
             // 
             // sshPort
             // 
             this.sshPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sshPort.Location = new System.Drawing.Point(211, 58);
+            this.sshPort.Location = new System.Drawing.Point(226, 58);
             this.sshPort.Margin = new System.Windows.Forms.Padding(5);
             this.sshPort.Name = "sshPort";
             this.sshPort.Size = new System.Drawing.Size(60, 26);
@@ -166,7 +169,7 @@
             this.labelSshPort.AutoSize = true;
             this.labelSshPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelSshPort.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelSshPort.Location = new System.Drawing.Point(161, 61);
+            this.labelSshPort.Location = new System.Drawing.Point(176, 61);
             this.labelSshPort.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelSshPort.Name = "labelSshPort";
             this.labelSshPort.Size = new System.Drawing.Size(51, 20);
@@ -176,7 +179,7 @@
             // webPort
             // 
             this.webPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.webPort.Location = new System.Drawing.Point(212, 21);
+            this.webPort.Location = new System.Drawing.Point(227, 21);
             this.webPort.Margin = new System.Windows.Forms.Padding(5);
             this.webPort.Name = "webPort";
             this.webPort.Size = new System.Drawing.Size(60, 26);
@@ -201,7 +204,7 @@
             this.labelWebPort.AutoSize = true;
             this.labelWebPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelWebPort.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelWebPort.Location = new System.Drawing.Point(159, 24);
+            this.labelWebPort.Location = new System.Drawing.Point(174, 24);
             this.labelWebPort.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelWebPort.Name = "labelWebPort";
             this.labelWebPort.Size = new System.Drawing.Size(54, 20);
@@ -251,9 +254,9 @@
             this.Violations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Violations.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Violations.ForeColor = System.Drawing.SystemColors.Window;
-            this.Violations.Location = new System.Drawing.Point(8, 110);
+            this.Violations.Location = new System.Drawing.Point(7, -1);
             this.Violations.Name = "Violations";
-            this.Violations.Size = new System.Drawing.Size(310, 319);
+            this.Violations.Size = new System.Drawing.Size(310, 455);
             this.Violations.TabIndex = 10;
             this.Violations.TabStop = false;
             this.Violations.Text = "Violations";
@@ -261,7 +264,7 @@
             // btnClearAll_V
             // 
             this.btnClearAll_V.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnClearAll_V.Location = new System.Drawing.Point(230, 280);
+            this.btnClearAll_V.Location = new System.Drawing.Point(230, 411);
             this.btnClearAll_V.Name = "btnClearAll_V";
             this.btnClearAll_V.Size = new System.Drawing.Size(75, 36);
             this.btnClearAll_V.TabIndex = 2;
@@ -272,7 +275,7 @@
             // btnSelectAll_V
             // 
             this.btnSelectAll_V.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnSelectAll_V.Location = new System.Drawing.Point(6, 280);
+            this.btnSelectAll_V.Location = new System.Drawing.Point(6, 411);
             this.btnSelectAll_V.Name = "btnSelectAll_V";
             this.btnSelectAll_V.Size = new System.Drawing.Size(75, 36);
             this.btnSelectAll_V.TabIndex = 1;
@@ -287,7 +290,7 @@
             this.violationsList.FormattingEnabled = true;
             this.violationsList.Location = new System.Drawing.Point(6, 22);
             this.violationsList.Name = "violationsList";
-            this.violationsList.Size = new System.Drawing.Size(298, 256);
+            this.violationsList.Size = new System.Drawing.Size(298, 382);
             this.violationsList.Sorted = true;
             this.violationsList.TabIndex = 0;
             // 
@@ -296,7 +299,7 @@
             this.Recognition_Selected_M.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Recognition_Selected_M.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Recognition_Selected_M.ForeColor = System.Drawing.SystemColors.Control;
-            this.Recognition_Selected_M.Location = new System.Drawing.Point(584, 288);
+            this.Recognition_Selected_M.Location = new System.Drawing.Point(604, 207);
             this.Recognition_Selected_M.Name = "Recognition_Selected_M";
             this.Recognition_Selected_M.Size = new System.Drawing.Size(30, 65);
             this.Recognition_Selected_M.TabIndex = 14;
@@ -309,7 +312,7 @@
             this.Recognition_Selected_P.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Recognition_Selected_P.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Recognition_Selected_P.ForeColor = System.Drawing.SystemColors.Control;
-            this.Recognition_Selected_P.Location = new System.Drawing.Point(325, 288);
+            this.Recognition_Selected_P.Location = new System.Drawing.Point(323, 207);
             this.Recognition_Selected_P.Name = "Recognition_Selected_P";
             this.Recognition_Selected_P.Size = new System.Drawing.Size(30, 65);
             this.Recognition_Selected_P.TabIndex = 13;
@@ -321,10 +324,10 @@
             // 
             this.Recognition_Selected.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Recognition_Selected.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Recognition_Selected.Location = new System.Drawing.Point(360, 298);
+            this.Recognition_Selected.Location = new System.Drawing.Point(358, 217);
             this.Recognition_Selected.Name = "Recognition_Selected";
             this.Recognition_Selected.ReadOnly = true;
-            this.Recognition_Selected.Size = new System.Drawing.Size(219, 44);
+            this.Recognition_Selected.Size = new System.Drawing.Size(240, 44);
             this.Recognition_Selected.TabIndex = 12;
             this.Recognition_Selected.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -337,7 +340,7 @@
             this.btnApply.FlatAppearance.BorderSize = 0;
             this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnApply.Location = new System.Drawing.Point(534, 360);
+            this.btnApply.Location = new System.Drawing.Point(554, 378);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(80, 80);
             this.btnApply.TabIndex = 11;
@@ -345,19 +348,38 @@
             this.btnApply.UseVisualStyleBackColor = false;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(323, 333);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(306, 35);
+            this.progressBar1.TabIndex = 15;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(322, 278);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(307, 44);
+            this.textBox1.TabIndex = 16;
+            // 
             // Filter_Factor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(622, 450);
+            this.ClientSize = new System.Drawing.Size(641, 466);
             this.ControlBox = false;
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Recognition_Selected_M);
-            this.Controls.Add(this.Recognition_Selected_P);
-            this.Controls.Add(this.Recognition_Selected);
             this.Controls.Add(this.btnApply);
+            this.Controls.Add(this.Recognition_Selected_P);
             this.Controls.Add(this.Violations);
             this.Controls.Add(this.auti);
+            this.Controls.Add(this.Recognition_Selected);
             this.Controls.Add(this.RangeIP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -400,5 +422,7 @@
         private System.Windows.Forms.Button Recognition_Selected_P;
         private System.Windows.Forms.TextBox Recognition_Selected;
         private System.Windows.Forms.Button btnApply;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

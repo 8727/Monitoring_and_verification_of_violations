@@ -58,6 +58,7 @@ namespace Monitoring_and_verification_of_violations
         XmlDocument xFile = new XmlDocument();
         XmlDocument xDoc = new XmlDocument();
         List<string> lastSelectedViolations = null;
+        List<string> lastSelectedViolationsFactor = null;
         List<string> lastSelectedCameras = null;
         string lastSelectedRecognition = null;
 
@@ -372,13 +373,13 @@ namespace Monitoring_and_verification_of_violations
 
             var violations = new HashSet<string>(DescriptionViolation.Values);
 
-            using (var filterDialog = new Filter_Factor(violations.ToList(), lastSelectedViolations, lastSelectedRecognition))
+            using (var filterDialog = new Filter_Factor(violations.ToList(), lastSelectedViolationsFactor, lastSelectedRecognition))
             {
                 if (filterDialog.ShowDialog() == DialogResult.OK)
                 {
-                    lastSelectedViolations = filterDialog.SelectedViolations;
+                    lastSelectedViolationsFactor = filterDialog.SelectedViolations;
                     lastSelectedRecognition = filterDialog.SelectedRecognition;
-                    ApplyFilterFactor(lastSelectedViolations, lastSelectedRecognition);
+                    ApplyFilterFactor(lastSelectedViolationsFactor, lastSelectedRecognition);
 
                 }
             }
